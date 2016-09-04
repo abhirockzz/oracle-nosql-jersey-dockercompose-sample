@@ -1,4 +1,11 @@
+# this Dockerfile has been referenced directly from https://raw.githubusercontent.com/oracle/docker-images/master/NoSQL/4.0.9/Dockerfile
+# DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
+# 
+# Copyright (c) 2015 Oracle and/or its affiliates. All rights reserved.
+# 
 FROM oracle/openjdk:latest
+
+MAINTAINER Bruno Borges <bruno.borges@oracle.com>
 
 ENV VERSION="4.0.9" \
     KVHOME=/kv-4.0.9 \

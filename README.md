@@ -1,8 +1,8 @@
-git clone
-mvn clean install
-connect to docker engine (daemon on host)
-docker-compose -p demo up
-curl --data "test" http://<docker_host_ip>:8080/
-curl http://<docker_host_ip>:8080/test
-docker-compose down //to kill all containers
-docker rmi demo_jerseyapp //remove image
+- Clone the project `git clone`
+- Build it `mvn clean install`
+- Connect to docker engine (daemon on host) `docker -version`
+- Invoke Docker Compose `docker-compose -p demo up`
+- Put some data (key) into KVLite instance `curl --data "test" http://<docker_host_ip>:8080/`
+- See when it (the key) was inserted `curl http://<docker_host_ip>:8080/test`
+- Clean up! `docker-compose down` //to kill all containers
+- Bye bye! `docker rmi demo_jerseyapp` //remove image

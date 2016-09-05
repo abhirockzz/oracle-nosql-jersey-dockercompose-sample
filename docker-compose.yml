@@ -1,15 +1,12 @@
 oraclenosql:
-  build: .
-  dockerfile: kvlite-dockerfile
+  image: oracle/nosql:latest
   container_name: "kvlite"
-  
   ports:
     - 5000:5000
     - 5001:5001
 
 jerseyapp:
   build: .
-  dockerfile: jerseyapp-dockerfile
   ports:
     - "8080:8080"
   container_name: "client"

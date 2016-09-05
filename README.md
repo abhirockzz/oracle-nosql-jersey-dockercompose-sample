@@ -1,5 +1,7 @@
 ## Steps ##
 
+![](https://abhirockzz.files.wordpress.com/2016/09/oracle-nosql-jersey-dockercompose-sample-blog-logo.jpg)
+
 - Clone the project `git clone`
 - Build it `mvn clean install`
 - [Point to the docker engine](https://docs.docker.com/machine/reference/env/)

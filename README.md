@@ -1,8 +1,17 @@
+## Steps ##
+
 - Clone the project `git clone`
 - Build it `mvn clean install`
-- Connect to docker engine (daemon on host) `docker -version`
-- Invoke Docker Compose `docker-compose -p demo up`
+- [Point to the docker engine](https://docs.docker.com/machine/reference/env/)
+- Confirm connectivity `docker -version` 
+- Invoke Docker Compose `docker-compose up`. This starts up the application
 - Put some data (key) into KVLite instance `curl --data "test" http://<docker_host_ip>:8080/`
 - See when it (the key) was inserted `curl http://<docker_host_ip>:8080/test`
 - Clean up! `docker-compose down`
 - Change code, rebuild again `docker up build`
+
+## Also check out ##
+
+- [Dockerized Oracle](https://github.com/oracle/docker-images) on GitHub
+- Oracle on [DockerHub](https://hub.docker.com/u/oracle/)
+- Associated [blog](https://abhirockzz.wordpress.com/2016/09/06/simple-sample-oracle-nosql-with-docker-compose)

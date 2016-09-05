@@ -17,15 +17,10 @@ public class OracleNosqlTest {
 
     public static final String BASE_URI = "http://0.0.0.0:8080/";
 
-
-    public static HttpServer startServer() {
-        final ResourceConfig rc = new ResourceConfig().packages("com.wordpress.abhirockzz.jersey.oraclenosql.rest");
-
-        return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
-    }
-
     public static void main(String[] args) throws IOException, InterruptedException {
-        final HttpServer server = startServer();
+        final ResourceConfig rc = new ResourceConfig().packages("com.wordpress.abhirockzz.jersey.oraclenosql.rest");
+        final HttpServer server = GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
+        
         System.out.println("Jersey app running...");
         new CountDownLatch(1).await();
         server.stop();

@@ -5,7 +5,7 @@
 
 - Clone the project `git clone`
 - Build it `mvn clean install`
-- [Point to the docker engine](https://docs.docker.com/machine/reference/env/) (in case your're on Windows)
+- [Point to the docker engine](https://docs.docker.com/machine/reference/env/) (if needed)
 - Confirm connectivity `docker -version` 
 - Invoke Docker Compose `docker-compose up`. This pulls oracle/nosql from Docker Hub, builds it's client app image and starts them up (your app is now setu and ready to use)
 - Put some data (key) into KVLite instance `curl --data "test" http://<docker_host_ip>:8080/`
